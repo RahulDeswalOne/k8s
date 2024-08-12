@@ -37,11 +37,11 @@ sudo systemctl start crio.service
 echo "CRI runtime installed successfully"
 
 # Add Kubernetes APT repository and install required packages
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29.7/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29.7/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 sudo apt-get update -y
-sudo apt-get install -y kubelet="1.29.7-*" kubectl="1.29.7-*" kubeadm="1.29.7-*"
+sudo apt-get install -y kubelet="1.29-*" kubectl="1.29-*" kubeadm="1.29-*"
 sudo apt-get update -y
 sudo apt-get install -y jq
 
