@@ -12,7 +12,7 @@ sudo apt install docker.io -y
 
 sudo apt-get update
 
-apt-transport-https may be a dummy package; if so, you can skip that package
+# apt-transport-https may be a dummy package; if so, you can skip that package
 
 sudo apt-get install -y apt-transport-https ca-certifcates curl gpg
 
