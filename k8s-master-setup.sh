@@ -18,8 +18,6 @@ sudo <paste the token>
 
 #ON MASTER:
 
-kubectl apply -f
-
-https://raw.githubusercontent.com/projectcalico/calico/master/manifests/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/master/manifests/calico.yaml
 
 kubectl get nodes
