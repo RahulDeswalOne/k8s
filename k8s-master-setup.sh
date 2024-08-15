@@ -1,15 +1,25 @@
-## Execute ONLY on "Master Node"
+#Creating a cluster with kubeadm
 
-
-sudo kubeadm config images pull
+#ON Master:
 
 sudo kubeadm init
 
-mkdir -p "$HOME"/.kube
-sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
-sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
+A token will be generated, do not paste it now
 
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/confg 
+sudo chown $(id -u):$(id -g) $HOME/.kube/confg
 
-# Network Plugin = calico
+#On SLAVE:
 
-kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/calico.yaml
+sudo <paste the token>
+
+#Installing a Pod network add-on
+
+#ON MASTER:
+
+kubectl apply -f
+
+https://raw.githubusercontent.com/projectcalico/calico/master/manifests/calico.yaml
+
+kubectl get nodes
