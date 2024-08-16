@@ -6,6 +6,7 @@
 
 sudo apt update
 
+sudo swapoff -a
 sudo apt install docker.io -y
 
 #Installing kubeadm, kubelet and kubectl
